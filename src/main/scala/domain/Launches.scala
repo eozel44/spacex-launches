@@ -97,6 +97,17 @@ case class Launches (
                       cores : Seq[Cores] = Seq.empty
                     )
 
+//sink
+case class dim_Payloads(launchId:String,payload:String)
+
+case class fact_Launches( id : String,
+                          flight_number : Int,
+                          name : String,
+                          date_local : LocalDate,
+                          success : Boolean,
+                          rocket : String
+                        )
+
 object Launches {
 
   val formatter = DateTimeFormatter.ISO_DATE_TIME
